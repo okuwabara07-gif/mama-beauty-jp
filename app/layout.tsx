@@ -4,7 +4,14 @@ export const metadata: Metadata = {
   description: 'ママ・育児中の美容情報',
   openGraph: { title: 'ママ美容Lab', description: 'ママ・育児中の美容情報', type: 'website', locale: 'ja_JP', siteName: 'ママ美容Lab' },
   twitter: { card: 'summary_large_image', title: 'ママ美容Lab', description: 'ママ・育児中の美容情報' },
-  robots: { index: true, follow: true },
+  robots: {
+    index: false,
+    follow: false,
+    googleBot: {
+      index: false,
+      follow: false,
+    },
+  },
 }
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
